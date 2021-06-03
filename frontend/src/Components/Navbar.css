@@ -1,0 +1,57 @@
+.Navbar{
+    display: flex;
+    background-color:black;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Navbar>*{
+    padding: 5px;
+    color: white;
+}
+
+.navbar>*{
+}
+
+.RightSide{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form{
+    flex-basis: 50%;
+}
+
+
+
+.SearchBar{
+    margin: 12px 5px;
+    padding: 5px 5px;
+    border-radius: 10px;
+    width: 70%;
+
+}
+button {
+    padding-top: 5px;
+    vertical-align: middle;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+
+.links{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+.links>*{
+
+    margin: 0px 30px;
+}
