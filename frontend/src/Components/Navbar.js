@@ -11,6 +11,11 @@ const Navbar = () => {
 
   const width = windowSize.width;
 
+  const toggleMenu = () => {
+    changeMenuOpen((menuPrev) => {
+      return !menuPrev;
+    });
+  };
   // useEffect(()=>{
   //     console.log(width)
   //    if(width<1000){
@@ -22,37 +27,53 @@ const Navbar = () => {
 
   useEffect(() => {
     console.log(width);
-    if (width < 1000) {
+    if (width <= 1000) {
       changeShowMenu(true);
     } else {
       changeShowMenu(false);
     }
-  }, [width]);
+  }, [windowSize]);
   return (
-    <div className="Navbar">
-      <div>LOGO</div>
-      <div>SHOEDB</div>
+    <>
+      <div className={showMenu ? "Navbar-show" : "Navbar"}>
+        
       {showMenu ? (
-        <div className="icon">
-          <HamburgerIcon />
-        </div>
-      ) : (
-        <div className="RightSide">
-          <form className="form">
-            <input type="text" name="Search"  className="SearchBar" placeholder="Search For Shoes"/>
-            <button type="submit">
-              <AiOutlineSearch size={20} color="white"/>
-            </button>
-            </form>
+            <div className="icon">
+                <HamburgerIcon menuOpen={menuOpen} toggleMenu={toggleMenu} />
+              </div>
+            ) : (
+              <div className="RightSide">
+                <form className="form">
+                  <input
+                    type="text"
+                    name="Search"
+                    className="SearchBar"
+                    placeholder="Search For Shoes"
+                  />
+                  <button type="submit">
+                    <AiOutlineSearch size={20} color="white" />
+                  </button>
+                </form>
 
-            <div className="links">
-                <div className="link"> Brands</div>
-                <div className="link"> Sign in</div>
-                <div className="link"> Sign up</div>
-            </div>
-        </div>
-      )}
-    </div>
+                <div className="links">
+                  <div className="link"> Brands</div>
+                  <div className="link"> Sign in</div>
+                  <div className="link signup"> Sign up</div>
+                </div>
+              </div>
+            )}
+
+
+        {menuOpen ? (
+          <div>MENU OPEN</div>
+        ) : (
+          < >
+            <div className="Logo">LOGO</div>
+            <div className="Name">SHOEDB</div>
+          </>
+        )}
+      </div>
+    </>
   );
 };
 
