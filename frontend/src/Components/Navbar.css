@@ -28,7 +28,9 @@
 .Name{
     order:2;
 }
-
+.icon-open{
+    order: 2;
+}
 
 .icon{
     order: 3;

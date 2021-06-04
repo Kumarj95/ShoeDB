@@ -19,7 +19,7 @@ code {
 }
 
 .Container{
-  min-height: 1000px;
+  height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
