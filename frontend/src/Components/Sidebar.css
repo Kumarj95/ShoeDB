@@ -1,0 +1,13 @@
+.Sidebar{
+    padding-top: 100px;
+    padding-left: 50px;
+
+}
+
+.Sidebar>ul{
+    margin-top: 25px;
+}
+
+ul>*{
+    margin: 30px 30px;
+}

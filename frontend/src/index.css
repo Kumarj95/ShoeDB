@@ -13,6 +13,7 @@ code {
 }
 
 *{
+  text-decoration:none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -25,3 +26,4 @@ code {
   flex-direction: column;
   border: 1px solid red;
 }
+
