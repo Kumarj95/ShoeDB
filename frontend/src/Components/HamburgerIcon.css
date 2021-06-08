@@ -16,13 +16,8 @@
     transition: all .5s ease-in-out;
 }
 
-.Logo{
-    order: 1;
-}
 
-.name{
-    order:2;
-}
+
 
 .menubtn_burger{
     width: 50px;

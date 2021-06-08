@@ -58,7 +58,7 @@ const Navbar = () => {
           </div>
         ) : (
           <div className="RightSide">
-            <form className="SearchForm">
+            <form className="SearchForm" action="/Search">
               <input
                 type="text"
                 name="q"

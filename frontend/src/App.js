@@ -10,11 +10,14 @@ function App() {
       <Navbar/>
       <Switch >
         
-        <Route path="/?q=">
-            SEARCH PATH
+        <Route   exact path="/Search">
+        {window.location.pathname}<br/>
+
+          NOTHING
         </Route>
-        <Route exact path="/">
-            BODY
+        <Route  path="/">
+
+          pepee
         </Route>
       </Switch>
     </div>

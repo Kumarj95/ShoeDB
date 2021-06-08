@@ -19,10 +19,10 @@ const Sidebar = ({menuOpen}) => {
     return (
         <div className="Sidebar" style={!menuOpen?style:{...style, right:"0" ,width:"100%"}}>
 
-            <form className="SearchForm">
+            <form className="SearchForm" action="/Search">
               <input
                 type="text"
-                name="Search"
+
                 className="SearchBar"
                 placeholder="Search For Shoes"
               />
