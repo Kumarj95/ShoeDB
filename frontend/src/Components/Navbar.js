@@ -29,7 +29,7 @@ const Navbar = () => {
 
   useEffect(() => {
     console.log(width);
-    if (width <= 1000) {
+    if (width <= 1046) {
       changeShowMenu(true);
     } else {
       if (menuOpen) {

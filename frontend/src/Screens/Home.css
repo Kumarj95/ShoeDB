@@ -1,0 +1,129 @@
+
+@media only screen and (min-width: 1050px) {
+
+.welcome-container{
+    width: 100%;
+    min-height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(black, white);
+}
+
+.image-container{
+    margin-left: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    flex-shrink: 0;
+    flex-grow: 1;
+    order: 2;
+    min-width: 250px;
+    overflow: hidden;
+    position: relative;
+  
+
+}
+.home-body{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-left: auto ;
+    margin-right: auto ;
+
+}
+.prodcutColumn{
+    margin: 15px;
+}
+.productRow{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+}
+img{    
+    transform: rotate(10deg);
+
+    height: auto;
+    max-width: 100%;
+}
+
+.text-container{
+    transition: all 0.5 ease-in-out;
+    margin-left: 15px;
+    font-family: 'Courier New', monospace;
+
+    order: 1;
+}
+.text-container:hover{
+    cursor: pointer;
+    color: red;
+}
+}
+@media only screen and (max-width: 1050px) {
+
+    .welcome-container{
+        padding-bottom: 25px;
+
+        width: 100%;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background:linear-gradient(black, white);
+    }
+    .prodcutColumn{
+        margin: 1.0rem;
+    }
+    .productRow{
+        display: flex;
+        flex-direction: row;
+        flex-basis: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .image-container{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-content: center;
+        flex-shrink: 0;
+        flex-grow: 0;
+        order: 1;
+        min-width: 250px;
+        overflow: hidden;
+        position: relative;
+      
+    
+    }
+    
+    img{    
+        transform: rotate(10deg);
+        height: auto;
+        max-width: 100%;
+    }
+    .home-body{
+        padding-top: 25px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        margin-right:auto;
+    }
+    
+    .text-container{
+        margin: auto;
+        transition: all 0.5 ease-in-out;
+        font-family: 'Courier New', monospace;
+    
+        order: 2;
+    }
+    .text-container:hover{
+        cursor: pointer;
+        color: red;
+    }
+    }

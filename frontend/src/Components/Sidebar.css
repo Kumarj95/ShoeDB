@@ -8,6 +8,17 @@
     margin-top: 25px;
 }
 
+.SearchBarSide{
+    padding: 5px 5px;
+    margin-right: 15px;
+    border-radius: 10px;
+    width: 70%;
+    min-width: 200px;
+
+}
+.SearchFormSide{
+    width: 100%;
+}
 ul>*{
     margin: 30px 30px;
 }

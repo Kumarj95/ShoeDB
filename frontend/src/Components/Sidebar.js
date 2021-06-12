@@ -3,7 +3,9 @@ import {AiOutlineSearch} from 'react-icons/ai'
 import './Sidebar.css'
 const Sidebar = ({menuOpen}) => {
     const style={
+        "zIndex":"1",
         "position": "fixed",
+        "overflowX":"hidden",
         "order":"1",
         "display":"flex",
         "flexDirection":"column",
@@ -19,11 +21,11 @@ const Sidebar = ({menuOpen}) => {
     return (
         <div className="Sidebar" style={!menuOpen?style:{...style, right:"0" ,width:"100%"}}>
 
-            <form className="SearchForm" action="/Search">
+            <form className="SearchFormSide" action="/Search">
               <input
                 type="text"
 
-                className="SearchBar"
+                className="SearchBarSide"
                 placeholder="Search For Shoes"
               />
               <button type="submit">
