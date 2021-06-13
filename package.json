@@ -1,0 +1,23 @@
+{
+  "name": "shoedb",
+  "version": "1.0.0",
+  "description": "Mern ShoeDB App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kumarj95/ShoeDB.git"
+  },
+  "author": "Kumar Vaibhav Jha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kumarj95/ShoeDB/issues"
+  },
+  "homepage": "https://github.com/Kumarj95/ShoeDB#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -13,7 +13,7 @@ const ShoeCard = ({ product }) => {
       </div>
       <Rating value={product.rating} text={`${product.numReviews} reviews` } />
 
-      <div className="CardBody">{product.price}</div>
+      <h3 className="CardBody">{`$${product.price}`}</h3>
 
     </div>
   );

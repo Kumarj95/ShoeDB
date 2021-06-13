@@ -1,0 +1,54 @@
+import React from 'react'
+import './ProductScreen.css'
+import { Link } from 'react-router-dom'
+import Rating from '../Components/Rating'
+import axios from 'axios'
+import {useState ,useEffect} from 'react'
+const ProductScreen = ({match}) => {
+    const [product,setProduct]= useState({})
+    useEffect(() => {
+        const fetchProduct= async()=>{
+          const {data}= await axios.get(`/api/products/${match.params.id}`)
+          setProduct(data)
+        }
+        fetchProduct();
+      }, [])
+    
+    
+
+    return (
+        <div className="ProductScreenContainer">
+        <Link to='/'>
+            <button className="BackBtn"> 
+            <h3>
+                Go Back
+                </h3>
+            </button>
+        </Link>
+        <div className="Row">
+            <div className="Col n1">
+                <div className="ProductImageContainer">
+                <img src={product.image} alt={product.name}/>
+                </div>
+            </div>
+            <div className="Col n2">
+                <div className="ProductNameContainer">
+                    <h1> {product.name}</h1>
+                </div>
+                <div className="seperator"></div>
+                <Rating value={product.rating} text={`${product.numReviews} reviews`}/>
+                <div className="seperator"></div>
+                <div className="ProductPrice">
+                    ${product.price}
+                </div>
+                <div className="seperator"></div>
+                <div className="ProductDescription">
+                    {product.description}
+                </div>
+            </div>
+        </div>
+        </div>
+    )
+}
+
+export default ProductScreen

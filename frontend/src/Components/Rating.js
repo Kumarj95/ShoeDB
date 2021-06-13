@@ -6,7 +6,7 @@ const Rating = ({ value, text, color}) => {
   return (
     <div className="Rating"
     >
-      <span style={{color:`${color}`}}>
+      <span style={{color:`${color}`,margin:"0.5rem"}}>
         {value >= 1 ? (
           <BsStarFill  />
         ) : value >= 0.5 ? (
