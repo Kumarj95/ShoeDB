@@ -2,8 +2,9 @@
 @media only screen and (min-width: 1050px) {
 
 .welcome-container{
+    
     width: 100%;
-    min-height: 250px;
+    min-height: 500px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -27,9 +28,10 @@
 
 }
 .home-body{
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    margin-top: 25px;
+    margin-top: 100px;
     margin-left: auto ;
     margin-right: auto ;
 
@@ -38,14 +40,20 @@
     margin: 15px;
 }
 .productRow{
+
     display: flex;
     flex-direction: row;
+    overflow: scroll;
     flex-basis: 100%;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
-img{    
+.welcome-image{
     transform: rotate(10deg);
 
+}
+.image-container img{    
+    
+transform: rotate(10deg);
     height: auto;
     max-width: 100%;
 }
@@ -66,9 +74,9 @@ img{
 
     .welcome-container{
         padding-bottom: 25px;
+        min-height: 500px;
 
         width: 100%;
-        min-height: 300px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -82,7 +90,6 @@ img{
         display: flex;
         flex-direction: row;
         flex-basis: 100%;
-        justify-content: space-between;
         flex-wrap: wrap;
     }
     
@@ -93,25 +100,26 @@ img{
         justify-content: center;
         justify-content: center;
         flex-shrink: 0;
-        flex-grow: 0;
+        flex-grow: 1;
         order: 1;
-        min-width: 250px;
+        min-width: 300px;
         overflow: hidden;
         position: relative;
       
     
     }
     
-    img{    
+    .image-container img{    
         transform: rotate(10deg);
         height: auto;
         max-width: 100%;
     }
     .home-body{
+        
         padding-top: 25px;
         display: flex;
         flex-direction: column;
-        margin-top: 50px;
+        margin-top: 100px;
         margin-right:auto;
     }
     

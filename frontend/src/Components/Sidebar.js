@@ -15,7 +15,7 @@ const Sidebar = ({menuOpen}) => {
         "width": "0%",
         "height": "100vh",
         "backgroundColor": "black",
-        "transition": "width 0.5s ease-in-out"
+        "transition": "width 0.3s ease-in-out"
     
     }
     return (
