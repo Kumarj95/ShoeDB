@@ -12,7 +12,7 @@ const ProductScreen = ({match}) => {
           setProduct(data)
         }
         fetchProduct();
-      }, [])
+      }, [match])
     
     
 
@@ -37,6 +37,7 @@ const ProductScreen = ({match}) => {
                 </div>
                 <div className="seperator"></div>
                 <Rating value={product.rating} text={`${product.numReviews} reviews`}/>
+                {console.log(product.countInStock)}
                 <div className="seperator"></div>
                 <div className="ProductPrice">
                     ${product.price}

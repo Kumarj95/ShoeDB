@@ -1,18 +1,19 @@
-const express= require('express')
-const products=require('./data/products')
+import express from 'express'
+import dotenv from'dotenv'
+import connectDB from './config/db.js'
 
+import productRoutes from './Routes/productRoutes.js'
+dotenv.config()
 const app=express()
 
 
-app.listen(5000, console.log("Server Running On Port 5000"))
-
-app.get('/api/products', (req,res)=>{
-    res.json(products)
-})
+ connectDB()
+const PORT=process.env.PORT || 5000
+app.listen(PORT, console.log(`Server Running in ${process.env.NODE_ENV} mode on port ${PORT}`))
 
 
+app.use('/api/products',productRoutes)
+// app.get('/', (req,res)=>{
+//     res.send("API is running..")
+// })
 
-app.get('/api/products/:id', (req,res)=>{
-    const product=products.find(pr=> pr._id===req.params.id)
-    res.json(product)
-})

@@ -27,7 +27,7 @@ code {
   flex-direction: column;
 
 }
-/* .Container>*>{
+.Container>*>{
   -webkit-animation: fadein 2s; 
   -moz-animation: fadein 2s;
    -ms-animation: fadein 2s; 
@@ -58,5 +58,5 @@ to   { opacity: 1; }
 @-o-keyframes fadein {
 from { opacity: 0; }
 to   { opacity: 1; }
-} */
+}
 

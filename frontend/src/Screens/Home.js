@@ -2,19 +2,19 @@ import React from "react";
 import "./Home.css";
 import shoe from "../Components/1-removebg-preview.png";
 import ShoeCard from "../Components/Cards/ShoeCard";
-import axios from 'axios';
+import axios from "axios";
 
 import { Link } from "react-router-dom";
-import {useState,useEffect} from 'react'
+import { useState, useEffect } from "react";
 const Home = () => {
-  const[products,setProducts]= useState([]);
+  const [products, setProducts] = useState([]);
   useEffect(() => {
-    const fetchProducts= async()=>{
-      const {data}= await axios.get('/api/products')
-      setProducts(data)
-    }
+    const fetchProducts = async () => {
+      const { data } = await axios.get("/api/products");
+      setProducts(data);
+    };
     fetchProducts();
-  }, [])
+  }, []);
 
   return (
     <div>
@@ -27,7 +27,7 @@ const Home = () => {
         </div>
       </div>
       <div className="home-body">
-        <h1 >Newest Additions</h1>
+        <h1>Newest Additions</h1> 
         <div className="productRow">
           {products.map((product) => (
             <div key={product._id} className="prodcutColumn">
