@@ -1,5 +1,45 @@
+/* .ProductScreenContainer{
+    animation: fade-in 2s;
 
-  .ProductScreenContainer{
+  }
+  @keyframes fade-in {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+
+.BackBtn:hover{
+    background: grey;
+}
+
+@media only screen and (min-width: 1050px) {
+    .ProductScreenContainer{
+        border: 1px solid red;
+        display: flex;
+        
+        gap: 50px;
+        margin: 30px auto;
+        flex-direction: column;
+
+    }
+
+    .Row{
+        display: flex;
+        gap: 50px;
+    }
+
+    .descriptions{
+        gap: 50px;
+        display: flex;
+    }
+
+} */
+
+.ProductScreenContainer{
     animation: fade-in 2s;
 
   }
@@ -16,12 +56,13 @@
 
 @media only screen and (min-width: 1050px) {
     .ProductScreenContainer{
-        width: 85%;
-        padding: 0px 10%;
+        align-self: center;
+        padding: 30px 30px;
         display: flex;
         flex-direction: column;
-            margin-top: 25px;
-    
+        margin-top: 25px;
+
+
     
     }
     
@@ -39,7 +80,7 @@
     
     .Col.n2{
         margin-left: 25px;
-    
+        padding: 25px;
     }
     
     .seperator{
@@ -48,10 +89,29 @@
         width: 300px;
         margin: 15px 0px;
     }
-    
+
+    .Col.n3{
+        display: inline-flex;
+        flex-direction: column;
+        flex: 0 1 auto;
+        flex-basis: 50;
+        padding: 10px;
+
+    }
+
+    .seperator.small{
+        width: 150px;
+
+    }
+    .n3{
+        margin-left: 25px;
+    }
+    .Row>*{
+        box-shadow: 0px 0px 3px;
+
+    }
     .Row{
 
-        width: 250px;
         display: flex;
         flex-direction: row;
         margin-top: 25px;
@@ -63,6 +123,14 @@
         max-width: 100%;
         max-height: 100%;
     }
+    .descriptions{
+        padding: 25px;
+        display: flex;
+        flex-direction: row;
+        box-shadow: 0px 0px 3px;
+
+    }
+
 }
 
 @media only screen and (max-width: 1050px) {
@@ -70,11 +138,21 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-            margin-top: 25px;
+        margin-top: 25px;
     
     
     }
-    
+    .ProductImageContainer{
+        width: 600px;
+        height: auto;
+    }
+
+    .descriptions{
+        display: flex;
+        flex-direction: row;
+        box-shadow: 0px 0px 3px;
+
+    }
     .BackBtn:hover{
         background:#DCDCDC;
     
@@ -114,5 +192,6 @@
         max-height: 100%;
     }
 }
+
 
 

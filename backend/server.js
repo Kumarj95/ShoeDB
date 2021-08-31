@@ -1,18 +1,25 @@
 import express from 'express'
 import dotenv from'dotenv'
 import connectDB from './config/db.js'
-
+import { notFound,errorHandler } from './middleware/errorMiddleware.js'
 import productRoutes from './Routes/productRoutes.js'
 dotenv.config()
 const app=express()
+// app.use((req,res,next)=>{
+//     console.log(req.url)
+//     next()
+// })
 
-
- connectDB()
+connectDB()
 const PORT=process.env.PORT || 5000
+app.use('/api/products',productRoutes)
+
+app.use(notFound)
+app.use(errorHandler)
+
 app.listen(PORT, console.log(`Server Running in ${process.env.NODE_ENV} mode on port ${PORT}`))
 
 
-app.use('/api/products',productRoutes)
 // app.get('/', (req,res)=>{
 //     res.send("API is running..")
 // })

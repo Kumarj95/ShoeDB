@@ -56,8 +56,8 @@ const products = [
     category: 'Electronics',
     price: 49.99,
     countInStock: 7,
-    rating: 0,
-    numReviews: 0,
+    rating: 5,
+    numReviews: 1,
   },
   {
     name: 'Amazon Echo Dot 3rd Generation',

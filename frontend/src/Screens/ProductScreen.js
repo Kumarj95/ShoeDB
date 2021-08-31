@@ -47,7 +47,17 @@ const ProductScreen = ({match}) => {
                     {product.description}
                 </div>
             </div>
-        </div>
+            <div className="Col n3">
+                <h4>Price:${product.price} </h4>
+                <div className="seperator small"></div>
+
+                <div className="availablity">Availablility:{product.countInStock>0?` Available`:   ` Not Available` }</div>
+                <div className="seperator small"></div>
+
+            </div>
+
+            </div>
+
         </div>
     )
 }
