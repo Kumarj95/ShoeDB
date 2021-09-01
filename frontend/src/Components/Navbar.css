@@ -26,6 +26,7 @@ Link{
     color: white;
 }
 .Logo{
+    padding: 10px;
     order: 1;
 }
 

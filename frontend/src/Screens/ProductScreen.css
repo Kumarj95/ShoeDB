@@ -53,10 +53,12 @@
     
 }
 
+.BackBtn:hover{
+    background: grey;
+}
 
 @media only screen and (min-width: 1050px) {
     .ProductScreenContainer{
-        align-self: center;
         padding: 30px 30px;
         display: flex;
         flex-direction: column;
@@ -67,11 +69,13 @@
     }
     
     .BackBtn:hover{
+        background:#DCDCDC;
     
     }
     
     .ProductNameContainer{
         width: 300px;
+        
         margin-bottom: 30px;
     
     }
@@ -107,6 +111,7 @@
     }
     .Row>*{
         box-shadow: 0px 0px 3px;
+        align-items: stretch;
 
     }
     .Row{
@@ -116,7 +121,7 @@
         margin-top: 25px;
     }
     .ProductImageContainer{
-        width: 600px;
+        width: 375px;
     }
     .ProductImageContainer >img{
         max-width: 100%;
@@ -134,62 +139,61 @@
 
 @media only screen and (max-width: 1050px) {
     .ProductScreenContainer{
-        width: 100%;
+        padding: 25px;
         display: flex;
         flex-direction: column;
-        margin-top: 25px;
-    
-    
-    }
-    .ProductImageContainer{
-        width: 600px;
-        height: auto;
+        gap:30px;
     }
 
-    .descriptions{
-        display: flex;
-        flex-direction: row;
-        box-shadow: 0px 0px 3px;
+    .seperator.small{
+        width: 100%;
 
     }
-    .BackBtn:hover{
-        background:#DCDCDC;
-    
+    .seperator.small.col3{
+        height: 0px;
     }
-    
-    .ProductNameContainer{
-        width: 75%;
-        margin-bottom: 30px;
-    
-    }
-    
-    
-    .Col.n2{
-        margin-left: 25px;
-    
-    }
-    
+
     .seperator{
         height: 1px;
         background-color: gray;
-        width: 150px;
+        width: 100%;
         margin: 15px 0px;
     }
-    
+
     .Row{
-        width: 100%;
+        padding-left: 25px;
         display: flex;
         flex-direction: column;
-        margin-top: 25px;
+        gap: 20px;
+        flex-wrap: wrap;
+
+    }
+    .descriptions{
+        order: 2;
     }
     .ProductImageContainer{
-        max-width: 750px;
-        width: 75%;
+        padding: 0;
+        width: 300px;
     }
     .ProductImageContainer >img{
         max-width: 100%;
         max-height: 100%;
     }
+    .Col.n3{
+        order: 1;
+    }
+      
+    }
+    .addToCart{
+        background-color: black; /* Green */
+        border: none;
+        color: white;
+        padding: 10px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+
 }
 
 

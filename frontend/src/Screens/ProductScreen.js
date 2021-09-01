@@ -26,12 +26,14 @@ const ProductScreen = ({match}) => {
             </button>
         </Link>
         <div className="Row">
-            <div className="Col n1">
+            <div className="descriptions">
+             <div className="Col n1">
                 <div className="ProductImageContainer">
                 <img src={product.image} alt={product.name}/>
                 </div>
             </div>
             <div className="Col n2">
+
                 <div className="ProductNameContainer">
                     <h1> {product.name}</h1>
                 </div>
@@ -47,12 +49,19 @@ const ProductScreen = ({match}) => {
                     {product.description}
                 </div>
             </div>
+            </div>
+
             <div className="Col n3">
+            <div className="seperator small col3"></div>
+
                 <h4>Price:${product.price} </h4>
-                <div className="seperator small"></div>
+                <div className="seperator small col3"></div>
 
                 <div className="availablity">Availablility:{product.countInStock>0?` Available`:   ` Not Available` }</div>
-                <div className="seperator small"></div>
+                <div className="seperator small col3"></div>
+                <button className="addToCart"> Add to Cart</button>
+                <div className="seperator small col3"></div>
+
 
             </div>
 
