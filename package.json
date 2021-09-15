@@ -11,6 +11,8 @@
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "data::import": "node backend/seeder",
+    "data::importShoe": "node backend/seeder -s",
+
     "data::destroy": "node backend/seeder -d"
   },
   "repository": {
@@ -24,11 +26,14 @@
   },
   "homepage": "https://github.com/Kumarj95/ShoeDB#readme",
   "dependencies": {
+    "axios": "^0.21.4",
     "bcryptjs": "^2.4.3",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
-    "mongoose": "^5.12.14"
+    "mongoose": "^5.12.14",
+    "node-fetch": "^3.0.0",
+    "puppeteer": "^10.2.0"
   },
   "devDependencies": {
     "concurrently": "^6.2.0",

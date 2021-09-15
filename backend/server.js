@@ -3,6 +3,8 @@ import dotenv from'dotenv'
 import connectDB from './config/db.js'
 import { notFound,errorHandler } from './middleware/errorMiddleware.js'
 import productRoutes from './Routes/productRoutes.js'
+import shoeRoutes from './Routes/shoeRoutes.js'
+
 dotenv.config()
 const app=express()
 // app.use((req,res,next)=>{
@@ -13,6 +15,7 @@ const app=express()
 connectDB()
 const PORT=process.env.PORT || 5000
 app.use('/api/products',productRoutes)
+app.use('/api/shoes',shoeRoutes)
 
 app.use(notFound)
 app.use(errorHandler)

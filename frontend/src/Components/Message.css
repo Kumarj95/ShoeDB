@@ -1,0 +1,9 @@
+.Message{
+    font-family: Quicksand;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
