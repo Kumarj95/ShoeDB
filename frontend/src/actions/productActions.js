@@ -11,7 +11,7 @@ import {
 export const listProducts = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_LIST_REQUEST });
-    const { data } = await axios("/api/shoes");
+    const { data } = await axios("/api/shoes/r/randomShoes");
     dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
   } catch (err) {
     dispatch({

@@ -40,6 +40,11 @@ const shoeSchema = mongoose.Schema(
       default: 0,
     },
 
+    countInStock:{
+      type: Number,
+      required:true
+    },
+
 
     name: {
       type: String,
@@ -67,7 +72,7 @@ const shoeSchema = mongoose.Schema(
     },
     description: {
       type: String,
-      required: true,
+      // required: true,
     },
     sizes: [
       {

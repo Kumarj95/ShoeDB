@@ -17,6 +17,7 @@ router.get('/', asyncHandler(async (req,res)=>{
 // @route GET api/products/:id
 // @access Public Route
 router.get('/:id', asyncHandler(async (req,res)=>{
+
     const shoe= await  Shoe.findById(req.params.id)
 
     if(shoe){
@@ -27,9 +28,12 @@ router.get('/:id', asyncHandler(async (req,res)=>{
     }
 }))
 
-router.get('/randomShoes', asyncHandler(async (req,res)=>{
+router.get('/r/randomShoes', asyncHandler(async (req,res)=>{
+    const shoes=[]
     for(var i=0; i<8; i++){
-
+        const shoe = await Shoe.aggregate([{ $sample: { size: 1 } }])
+        shoes.push(shoe[0])
     }
+    res.json(shoes)
 }))
 export default router;
