@@ -34,6 +34,12 @@ router.get('/r/randomShoes', asyncHandler(async (req,res)=>{
         const shoe = await Shoe.aggregate([{ $sample: { size: 1 } }])
         shoes.push(shoe[0])
     }
-    res.json(shoes)
+    if(shoes){
+        res.json(shoes)
+    }else{
+        res.status(404)
+        throw new Error('Shoe Not Found')
+    }
+
 }))
 export default router;
